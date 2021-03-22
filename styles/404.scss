@@ -1,0 +1,38 @@
+.fourohfour-container {
+	display: flex;
+
+	.fourohfour-code {
+		padding: 0 3rem;
+		border-right: 1px solid $black;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		h1 {
+			font-size: 6rem;
+		}
+	}
+
+	.fourohfour-msg {
+		padding: 0 3rem;
+
+		p {
+			max-width: 420px;
+			font-size: 2rem;
+			margin: 1rem 0;
+			font-weight: 700;
+		}
+
+		span {
+			color: rgba(0, 0, 0, 0.7);
+
+			a {
+				font-size: 0.8rem;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,156 @@
+// Playlist form
+.back-drop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($black, 0.4);
+  z-index: 98;
+}
+
+.playlist-modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 99;
+  transform: translate(-50%, -50%);
+  padding: 2rem;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 0.9rem;
+  .close-btn {
+    position: absolute;
+    right: 18px;
+    top: 17px;
+    img {
+      width: 13px;
+    }
+  }
+  .input-field {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    label {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+    input {
+      padding-bottom: 4px;
+      font-size: 1rem;
+      border: none;
+      border-bottom: 1px solid #cacaca;
+    }
+    .error {
+      padding-top: 0.3rem;
+      font-size: 0.8rem;
+      color: #e20b0b;
+    }
+  }
+  .create-btn {
+    width: 100%;
+  }
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  h1 {
+    text-transform: capitalize;
+  }
+  button {
+    margin-left: 1.5rem;
+    text-decoration: underline;
+  }
+}
+
+.back-btn {
+  position: sticky;
+  margin: 0 -2.5rem -2rem;
+  padding: 1.5rem 2.5rem 1.5rem;
+  top: $header;
+  z-index: 2;
+  background-color: $white-linen;
+  button {
+    text-decoration: underline;
+  }
+  @media (max-width: 768px) {
+    top: $header-mobile;
+  }
+}
+
+.album-back-btn {
+  background-color: $night-shadz;
+  color: $white;
+  text-align: center;
+  button {
+    font-size: 1.2rem;
+  }
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+.shuffle-btn {
+  margin-right: 1.2rem;
+}
+
+// Playlist Card
+.playlistCard-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 400px);
+  grid-gap: 20px;
+  justify-content: center;
+  .playlistCard {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 2rem 2rem;
+    font-size: 1.2rem;
+    background-image: linear-gradient(46deg, $azalea, $gin-fizz);
+    border-radius: 0.9rem;
+    background-position: center;
+    @include box-shadow(0, 1px, 9px, $black, 0.1);
+    .created-date {
+      position: absolute;
+      top: 9px;
+      right: 18px;
+      font-size: 0.7rem;
+    }
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.song-card-container {
+  margin: 2.5rem 0;
+  & > *:not(:first-child) {
+    border-top: 1px solid #cecece;
+  }
+  .song-card {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem 0;
+    color: #585858;
+    .song-img {
+      width: 45px;
+      border-radius: 0.3rem;
+    }
+    .song-detail {
+      width: 80%;
+      margin: 0 20px;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+    }
+    .song-action-btn {
+      display: flex;
+      align-items: center;
+      & > *:first-child {
+        margin-right: 1rem;
+      }
+    }
+  }
+}

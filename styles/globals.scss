@@ -1,0 +1,111 @@
+@import 'variables.scss';
+@import 'NextProgressBar.scss';
+@import '404.scss';
+@import 'Navbar.scss';
+@import 'Album.scss';
+@import 'Playlist.scss';
+@import 'Loader.scss';
+
+html,
+body {
+  position: relative;
+  background-color: $white-linen;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 14px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  img,
+  svg {
+    pointer-events: none;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:active,
+  &:hover {
+    color: inherit;
+  }
+}
+
+h1 {
+  margin: 2.5rem 0;
+}
+
+main {
+  margin-top: $header;
+  padding: 0 $pad-wrap;
+  @media (max-width: 768px) {
+    margin-top: $header-mobile;
+    padding: 0 $pad-wrap-mobile;
+  }
+}
+
+:focus {
+  outline-width: 0;
+}
+
+.font-medium {
+  color: $cod-gray;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.font-small {
+  font-size: 0.9rem;
+  padding-top: 0.2rem;
+}
+
+.container {
+  min-height: 94vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.clickable {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.click-btn {
+  position: relative;
+  z-index: 2;
+}
+
+.primary-btn {
+  padding: 8px 10px;
+  background-color: $night-shadz;
+  color: $white;
+  border-radius: 0.3rem;
+}
+
+.disable-btn {
+  pointer-events: none;
+  opacity: 0.8;
+}
+
+.theme-red {
+  color: $night-shadz;
+}

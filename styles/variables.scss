@@ -1,0 +1,29 @@
+$white: #fff;
+$black: #000;
+$nero: #222;
+$navy-blue: #0070f3;
+$whisper: #eee;
+$gainsboro: #e1e1e1;
+$light-grey: #d2d2d2;
+$snow: #fafafa;
+
+$white-linen: #fbf6f0;
+$scorpion: #5f5f5f;
+$cod-gray: #0e0e0e;
+$night-shadz: #9e3050;
+$azalea: #f5c1c7;
+$moon-raker: #c6c7f3;
+$scotch-mist: #fffedb;
+$gin-fizz: #fffbe2;
+$wattle: #d6ce4d;
+
+$pad-wrap: 2.5rem;
+$pad-wrap-mobile: 1.3rem;
+$header: 70px;
+$header-mobile: 55px;
+
+@mixin box-shadow($h-offset, $v-offset, $blur, $color, $opacity) {
+  -moz-box-shadow: $h-offset $v-offset $blur rgba($color, $opacity);
+  -webkit-box-shadow: $h-offset $v-offset $blur rgba($color, $opacity);
+  box-shadow: $h-offset $v-offset $blur rgba($color, $opacity);
+}
