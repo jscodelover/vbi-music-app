@@ -1,4 +1,4 @@
-#VBI Music App
+# VBI Music App
 
 - On landing page(/) [for listing all albumns] - I have used /albums api to get the albums list and when user clicks on any album it will fetch the songs of that particular album from /photos/{id} api end point. 
 
